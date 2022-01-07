@@ -1,0 +1,135 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Mihaela Rinja, ATM, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.4.0
+Target DLL:      CMSIS_AGDI.dll V1.33.0.0
+Dialog DLL:      TARMCM1.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Mihaela\Desktop\proiect micro\proiect.uvprojx
+Project File Date:  12/31/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_MKL25Z4.s...
+compiling system_MKL25Z4.c...
+main.c(10): warning: non-portable path to file '<MKL25Z4.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <MKL25Z4.H>
+         ^~~~~~~~~~~
+         <MKL25Z4.h>
+main.c(36): warning: implicit conversion loses integer precision: 'const volatile uint32_t' (aka 'const volatile unsigned int') to 'short' [-Wimplicit-int-conversion]
+                result = ADC0->R[0]; /* read conversion result and clear COCO flag */
+                       ~ ^~~~~~~~~~
+C:/Users/Mihaela/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include\MKL25Z4.H(547): note: expanded from macro 'ADC0'
+#define ADC0                                     ((ADC_Type *)ADC0_BASE)
+                                                 ^
+main.c(74): warning: possible misuse of comma operator here [-Wcomma]
+                aux=*end, *end--=*begin, *begin++=aux;
+                        ^
+main.c(74): note: cast expression to void to silence warning
+                aux=*end, *end--=*begin, *begin++=aux;
+                ^~~~~~~~
+                (void)( )
+main.c(74): warning: possible misuse of comma operator here [-Wcomma]
+                aux=*end, *end--=*begin, *begin++=aux;
+                                       ^
+main.c(74): note: cast expression to void to silence warning
+                aux=*end, *end--=*begin, *begin++=aux;
+                          ^~~~~~~~~~~~~
+                          (void)(      )
+main.c(79): warning: declaration shadows a variable in the global scope [-Wshadow]
+void itoa(int value, char* str, int base) {
+                           ^
+main.c(24): note: previous declaration is here
+                        char str[10];
+                             ^
+main.c(142): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                ADC0->SC2 &= ~0x40; /* software trigger */
+                          ~~ ^~~~~
+main.c(173): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'unsigned short' [-Wimplicit-int-conversion]
+      castigCalibrare = ADC0_CLP0;
+                      ~ ^~~~~~~~~
+C:/Users/Mihaela/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include\MKL25Z4.H(587): note: expanded from macro 'ADC0_CLP0'
+#define ADC0_CLP0                                ADC_CLP0_REG(ADC0)
+                                                 ^~~~~~~~~~~~~~~~~~
+C:/Users/Mihaela/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include\MKL25Z4.H(309): note: expanded from macro 'ADC_CLP0_REG'
+#define ADC_CLP0_REG(base)                       ((base)->CLP0)
+                                                  ~~~~~~~~^~~~
+main.c(187): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'unsigned short' [-Wimplicit-int-conversion]
+      castigCalibrare = ADC0_CLM0;
+                      ~ ^~~~~~~~~
+C:/Users/Mihaela/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include\MKL25Z4.H(594): note: expanded from macro 'ADC0_CLM0'
+#define ADC0_CLM0                                ADC_CLM0_REG(ADC0)
+                                                 ^~~~~~~~~~~~~~~~~~
+C:/Users/Mihaela/AppData/Local/Arm/Packs/Keil/Kinetis_KLxx_DFP/1.15.0/Device/Include\MKL25Z4.H(316): note: expanded from macro 'ADC_CLM0_REG'
+#define ADC_CLM0_REG(base)                       ((base)->CLM0)
+                                                  ~~~~~~~~^~~~
+main.c(210): warning: implicit conversion changes signedness: 'int' to 'uint8_t' (aka 'unsigned char') [-Wsign-conversion]
+                        val[0] = result >> 8;     // high byte (0x12)
+                               ~ ~~~~~~~^~~~
+main.c(23): warning: no previous extern declaration for non-static variable 'val' [-Wmissing-variable-declarations]
+                        uint8_t val[2];
+                                ^
+main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+                        uint8_t val[2];
+                        ^
+main.c(24): warning: no previous extern declaration for non-static variable 'str' [-Wmissing-variable-declarations]
+                        char str[10];
+                             ^
+main.c(24): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+                        char str[10];
+                        ^
+11 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=1448 RO-data=240 RW-data=0 ZI-data=368  
+".\Objects\proiect.axf" - 0 Error(s), 11 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.0.pack
+                Keil.Kinetis_KLxx_DFP.1.15.0
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 2.5.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\MKL25Z128xxx4
+  .\RTE\_Target_1
+  C:\Users\Mihaela\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\Mihaela\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:2.5.0
+      Source file:   Device\Source\ARM\startup_MKL25Z4.s
+      Source file:   Device\Source\system_MKL25Z4.c
+      Include file:  Device\Source\system_MKL25Z4.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
